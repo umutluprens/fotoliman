@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FotoLiman: Google Photos yedekleme (macOS)</title>
+<meta name="description" content="FotoLiman, Google Photos'taki fotoğraf ve videoları doğrudan harici diske yedekleyen macOS uygulaması.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header>
+<img src="logo.svg" width="88" height="88" alt="FotoLiman logosu">
+<div>
+<p class="tag">macOS · Google Photos yedekleme</p>
+<h1>FotoLiman</h1>
+<p class="muted" style="margin:2px 0 0">Anıların limanı</p>
+</div>
+</header>
+<nav>
+<a href="./">Ana sayfa / Home</a>
+<a href="privacy.html">Gizlilik politikası / Privacy policy</a>
+<a href="terms.html">Kullanım şartları / Terms of service</a>
+</nav>
+<section class="lang" lang="tr">
+
+<h2>FotoLiman nedir?</h2>
+<p>FotoLiman, Google Photos'taki fotoğraf ve videolarını <strong>doğrudan kendi harici diskine</strong> yedekleyen, kişisel kullanım için yazılmış bir macOS uygulamasıdır.</p>
+<ul>
+<li>Google'ın kendi seçim ekranında (Google Photos Picker) işaretlediğin fotoğraf ve videoları indirir.</li>
+<li>Tüm arşiv için Google Takeout ZIP dosyalarını içe aktarır; çekim tarihini ve konumu korur.</li>
+<li>Aktarımı duraklatıp kaldığı yerden sürdürür; her dosyayı SHA-256 ile doğrular.</li>
+<li>Disk çıkarılınca güvenle durur, yeniden takılınca devam eder.</li>
+</ul>
+<h2>Google verilerini nasıl kullanır?</h2>
+<p>FotoLiman yalnızca <code>photospicker.mediaitems.readonly</code> iznini ister. Bu izinle <strong>sadece senin seçtiğin</strong> fotoğraf ve videolara erişir; kütüphanenin geri kalanını, e-postanı veya kişilerini göremez. Seçtiğin dosyalar Google'dan doğrudan senin bilgisayarına ve seçtiğin diske iner. FotoLiman'ın sunucusu yoktur; verilerin geliştiriciye veya başka birine gönderilmez.</p>
+<p>Ayrıntılar için <a href="privacy.html">gizlilik politikasına</a> ve <a href="terms.html">kullanım şartlarına</a> bak.</p>
+<p class="muted">Sorular ve talepler için: <a href="https://github.com/umutluprens/fotoliman/issues">github.com/umutluprens/fotoliman/issues</a></p>
+
+</section>
+<section class="lang" lang="en">
+
+<h2>What is FotoLiman?</h2>
+<p>FotoLiman is a macOS app for personal use that backs up photos and videos from Google Photos <strong>directly to your own external disk</strong>.</p>
+<ul>
+<li>It downloads the photos and videos you select in Google's own picker (Google Photos Picker).</li>
+<li>For a full archive it imports Google Takeout ZIP files and keeps capture dates and locations.</li>
+<li>Transfers can be paused and resumed, and every file is verified with SHA-256.</li>
+<li>It stops safely when the disk is ejected and continues when the same disk is connected again.</li>
+</ul>
+<h2>How does it use Google data?</h2>
+<p>FotoLiman requests only the <code>photospicker.mediaitems.readonly</code> scope. With it, the app can access <strong>only the items you pick</strong>; it cannot see the rest of your library, your email or your contacts. The selected files go from Google directly to your computer and the disk you chose. FotoLiman has no servers and does not send your data to the developer or anyone else.</p>
+<p>See the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms of service</a> for details.</p>
+<p class="muted">Questions and requests: <a href="https://github.com/umutluprens/fotoliman/issues">github.com/umutluprens/fotoliman/issues</a></p>
+
+</section>
+<footer>
+<p>FotoLiman bağımsız bir uygulamadır; Google ile bağlantılı değildir ve Google tarafından onaylanmamıştır. Google Photos, Google LLC'nin ticari markasıdır.<br>
+FotoLiman is an independent app. It is not affiliated with or endorsed by Google. Google Photos is a trademark of Google LLC.</p>
+</footer>
+</main>
+</body>
+</html>
