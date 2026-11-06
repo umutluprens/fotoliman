@@ -22,6 +22,7 @@ h1 { font-size: 28px; line-height:1.2; margin:0; }
 .hero p { margin:0 0 14px; color:var(--muted); }
 .dl { display:inline-block; background:#1C67B8; color:#fff; text-decoration:none; font-size:20px; font-weight:700; padding:16px 34px; border-radius:16px; }
 .dl:hover { filter:brightness(1.08); }
+.note { font-size:14px; margin-top:12px !important; padding:10px 14px; border-radius:12px; background:rgba(246,185,53,.16); border-left:4px solid #F6B935; color:var(--ink); }
 .meta { font-size:14px; color:var(--muted); margin-top:10px !important; }
 .others { margin:14px 0 0; font-size:15px; color:var(--muted); }
 .tabs { display:inline-flex; gap:6px; background:var(--soft); padding:4px; border-radius:12px; margin-top:6px; flex-wrap:wrap; justify-content:center; }
@@ -59,6 +60,7 @@ footer a, a { color:var(--sea); }
   <p id="detected">Cihazına uygun sürüm:</p>
   <a id="dl" class="dl" href="#">İndir</a>
   <p id="meta" class="meta"></p>
+  <p id="note" class="note hidden"></p>
   <p id="arm" class="meta small hidden">Snapdragon (ARM işlemcili) bilgisayar mı? <a id="armlink" href="#">Bu sürümü indir</a>.</p>
   <p class="others">Başka bir cihaz için:</p>
   <div class="tabs" role="group" aria-label="Cihaz seç">
@@ -69,6 +71,7 @@ footer a, a { color:var(--sea); }
   </div>
 </section>
 
+<span id="kurulum"></span>
 <!-- MAC -->
 <section data-for="mac">
   <h2>Mac'te kurulum</h2>
@@ -164,6 +167,8 @@ function show(os, auto) {
     dl.classList.remove("hidden"); dl.textContent = r.label; dl.href = url(r.id);
     document.getElementById("meta").textContent = r.meta;
   }
+  var NOTE = {"mac": "İndirdikten sonra Mac \"doğrulanamadı\" diyecek. Bu normal: <a href=\"#kurulum\">aşağıdaki 3 adıma</a> bak.", "win": "Windows ilk açılışta \"Windows bilgisayarınızı korudu\" diyebilir. Bu normal: <a href=\"#kurulum\">aşağıdaki adımlara</a> bak.", "android": "Telefon ilk seferde bilinmeyen uygulama izni ister. Bu normal: <a href=\"#kurulum\">aşağıdaki adımlara</a> bak."};
+  var note = document.getElementById("note"); note.innerHTML = NOTE[os] || ""; note.classList.toggle("hidden", !NOTE[os]);
   document.getElementById("arm").classList.toggle("hidden", os !== "win");
   document.getElementById("armlink").href = url(REL.winarm.id);
   document.querySelectorAll("[data-for]").forEach(function (s) {
