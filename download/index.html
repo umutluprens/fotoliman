@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download FotoLiman</title>
+<meta name="description" content="Download the latest FotoLiman in one click: Mac, Windows and Android.">
+<style>
+:root { --ink:#163A5C; --muted:#5B6773; --sea:#1C67B8; --coral:#D9473B; --leaf:#17784B; --bg:#FBF7F2; --card:#FFFFFF; --line:#E6E1DA; --soft:#F1ECE5; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink:#E8EEF5; --muted:#A7B3C0; --sea:#6CB4F5; --coral:#FF8A7E; --leaf:#5FD39A; --bg:#101B26; --card:#162432; --line:#26384A; --soft:#1B2C3C; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+header { display:flex; gap:14px; align-items:center; }
+header img { flex:none; }
+.lang { margin-left:auto; align-self:flex-start; font-size:14px; padding:6px 12px; border:1px solid var(--line); border-radius:10px; text-decoration:none; background:var(--card); }
+h1 { font-size: 28px; line-height:1.2; margin:0; }
+.sub { color:var(--muted); margin:2px 0 0; font-size:16px; }
+.hero { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:26px 22px; margin:24px 0 10px; text-align:center; }
+.hero p { margin:0 0 14px; color:var(--muted); }
+.dl { display:inline-block; background:#1C67B8; color:#fff; text-decoration:none; font-size:20px; font-weight:700; padding:16px 34px; border-radius:16px; }
+.dl:hover { filter:brightness(1.08); }
+.meta { font-size:14px; color:var(--muted); margin-top:10px !important; }
+.others { margin:14px 0 0; font-size:15px; color:var(--muted); }
+.tabs { display:inline-flex; gap:6px; background:var(--soft); padding:4px; border-radius:12px; margin-top:6px; flex-wrap:wrap; justify-content:center; }
+.tabs button { border:0; background:transparent; color:var(--ink); font:600 15px/1 inherit; font-family:inherit; padding:9px 14px; border-radius:9px; cursor:pointer; }
+.tabs button[aria-pressed="true"] { background:var(--card); box-shadow:0 1px 3px rgba(0,0,0,.12); }
+.small { font-size:14px; }
+h2 { font-size:21px; margin:34px 0 4px; }
+ol.steps { list-style:none; padding:0; margin:16px 0 0; counter-reset:s; }
+ol.steps > li { counter-increment:s; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 18px 16px 62px; margin-bottom:14px; position:relative; }
+ol.steps > li::before { content:counter(s); position:absolute; left:16px; top:16px; width:32px; height:32px; border-radius:50%; background:var(--coral); color:#fff; font-weight:700; text-align:center; line-height:32px; }
+ol.steps b { color:var(--ink); }
+figure { margin:14px 0 2px; }
+figure img { display:block; max-width:100%; height:auto; }
+figcaption { font-size:13px; color:var(--muted); margin-top:4px; }
+.note { background:var(--soft); border-radius:14px; padding:14px 16px; font-size:15px; margin-top:14px; }
+.ok { color:var(--leaf); font-weight:700; }
+.hidden { display:none !important; }
+footer { margin-top:40px; font-size:14px; color:var(--muted); text-align:center; }
+footer a, a { color:var(--sea); }
+@media (max-width:520px){ ol.steps > li { padding-left:18px; padding-top:58px; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <img src="../logo.svg" width="64" height="64" alt="FotoLiman logo">
+  <div>
+    <h1>Download FotoLiman</h1>
+    <p class="sub">Back up your photos to your own disk, verified.</p>
+  </div>
+  <a class="lang" href="../indir/" lang="tr">Türkçe</a>
+</header>
+
+<section class="hero" aria-live="polite">
+  <p id="detected">The right version for your device:</p>
+  <a id="dl" class="dl" href="#">Download</a>
+  <p id="meta" class="meta"></p>
+  <p id="arm" class="meta small hidden">Snapdragon (ARM) PC? <a id="armlink" href="#">Download this version</a>.</p>
+  <p class="others">For another device:</p>
+  <div class="tabs" role="group" aria-label="Choose device">
+    <button data-os="mac">Mac</button>
+    <button data-os="win">Windows</button>
+    <button data-os="android">Android</button>
+    <button data-os="ios">iPhone</button>
+  </div>
+</section>
+
+<!-- MAC -->
+<section data-for="mac">
+  <h2>Installing on a Mac</h2>
+  <p class="sub">FotoLiman is not part of Apple's paid developer programme, so your Mac warns you once when you first open it. These steps take a minute and you won't be asked again.</p>
+  <ol class="steps">
+    <li><b>Open the downloaded file</b> and drag FotoLiman into the <b>Applications</b> folder. Then double-click FotoLiman.</li>
+    <li>A <b>“FotoLiman” Not Opened</b> message appears. Click <b>Done</b>.
+      <figure><img src="img/mac1.png" width="424" alt="Mac warning with the Done button highlighted"></figure></li>
+    <li>Open <b>System Settings › Privacy &amp; Security</b>, scroll to the bottom and click <b>Open Anyway</b> next to FotoLiman.
+      <figure><img src="img/mac2.png" width="600" alt="Privacy and Security with Open Anyway highlighted"></figure>
+      If it asks again, click <b>Open Anyway</b> once more and enter your Mac password or use Touch ID.
+      <figure><img src="img/mac3.png" width="424" alt="Confirmation with Open Anyway highlighted"></figure></li>
+  </ol>
+  <p class="note">Requires a Mac with Apple silicon (M1 or later) and macOS 14 or later.</p>
+</section>
+
+<!-- WINDOWS -->
+<section data-for="win" class="hidden">
+  <h2>Installing on Windows</h2>
+  <p class="sub">FotoLiman does not carry a paid digital signature, so Windows warns you once the first time you run it.</p>
+  <ol class="steps">
+    <li><b>Double-click the downloaded file.</b> <span class="small">(You can also open it from your browser's downloads list.)</span></li>
+    <li>If the blue <b>“Windows protected your PC”</b> screen appears, click <b>More info</b>, then <b>Run anyway</b>.
+      <figure><img src="img/win1.png" width="560" alt="Windows warning with More info highlighted"></figure>
+      <figure><img src="img/win2.png" width="560" alt="Windows warning with Run anyway highlighted"></figure></li>
+    <li>Click <b>Install</b> (it says <b>Update</b> if an older version is installed). FotoLiman then appears on your desktop and in the Start menu.</li>
+  </ol>
+  <p class="note">For Wi‑Fi transfers from your phone: when you first open FotoLiman Link, if the firewall asks, tick <b>Private networks</b> and allow it.</p>
+</section>
+
+<!-- ANDROID -->
+<section data-for="android" class="hidden">
+  <h2>Installing on Android</h2>
+  <p class="sub">FotoLiman Mobile is not on Google Play; it installs from the file. Your phone asks for permission the first time.</p>
+  <ol class="steps">
+    <li><b>When the download finishes, tap the file.</b> If the phone warns about unknown apps, tap <b>Settings</b>.
+      <figure><img src="img/and1.png" width="600" alt="Android warning with Settings highlighted"></figure></li>
+    <li>Turn on <b>Allow from this source</b>, then go back.
+      <figure><img src="img/and2.png" width="600" alt="Allow from this source highlighted"></figure></li>
+    <li>Tap <b>Install</b>. <span class="small">If a Play Protect warning appears, tap <b>More details › Install anyway</b>.</span>
+      <figure><img src="img/and3.png" width="600" alt="Install highlighted"></figure></li>
+  </ol>
+  <p class="note">Android 8 or later. When a new version comes out, download it from the same button and install it over the old one; your settings are kept.</p>
+</section>
+
+<!-- IPHONE -->
+<section data-for="ios" class="hidden">
+  <h2>iPhone</h2>
+  <p class="note">Apps can't be installed on an iPhone from a file; Apple doesn't allow it. To back up your iPhone's photos, <b>connect the iPhone to a Mac or Windows PC with a cable</b> and choose it under <b>Camera / SD card</b> in FotoLiman on the computer. The computer download is above.</p>
+</section>
+
+<!-- GOOGLE -->
+<section data-for="mac win" id="google">
+  <h2>Connecting to Google Photos</h2>
+  <p class="sub">FotoLiman is a personal app, so Google shows an “unverified” screen once. FotoLiman only reads the photos you pick and cannot delete anything.</p>
+  <ol class="steps">
+    <li>Click <b>Advanced</b>, then <b>Go to fotoliman (unsafe)</b>, and allow access.
+      <figure><img src="img/goo.png" width="560" alt="Google warning with Advanced and the continue link highlighted"></figure></li>
+  </ol>
+</section>
+
+<footer>
+  <p><a href="../">About FotoLiman</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../indir/">Türkçe</a></p>
+  <p>The windows in the pictures are examples; yours may look slightly different.</p>
+</footer>
+</main>
+
+<script>
+// The only place to change on a new release: version labels and Drive file ids.
+var REL = {
+  mac:     { name: "Mac",     label: "Download for Mac",     meta: "Version 1.1.10 · 47 MB", id: "1nlI2OUzfeZRCz36e73GWkBorJHM_MLAq" },
+  win:     { name: "Windows", label: "Download for Windows", meta: "Version 1.1.10 · Windows 10 and 11 · 59 MB", id: "1kD2yekEqKNTJN_m8J0329IZccTOsF_m1" },
+  winarm:  { id: "1nY1fHGRExjZ0l8PgCzttHXpNfhaGRzlt" },
+  android: { name: "Android", label: "Download for Android", meta: "FotoLiman Mobile 0.2.0 · 1.5 MB", id: "1TUFWtbOl-Ujgyb-KJUcbJ8ft79Ufd362" },
+  ios:     { name: "iPhone",  label: "", meta: "", id: "" }
+};
+function url(id) { return "https://drive.usercontent.google.com/download?id=" + id + "&export=download&confirm=t"; }
+function detect() {
+  var ua = navigator.userAgent || "";
+  if (/Android/i.test(ua)) return "android";
+  if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return "ios";
+  if (/Mac/i.test(ua)) return "mac";
+  if (/Win/i.test(ua)) return "win";
+  return "mac";
+}
+function show(os, auto) {
+  var r = REL[os], dl = document.getElementById("dl");
+  document.getElementById("detected").textContent = auto ? "The right version for your device (" + r.name + "):" : "For " + r.name + ":";
+  if (os === "ios") {
+    dl.classList.add("hidden");
+    document.getElementById("meta").textContent = "There is no app file for iPhone. See the note below.";
+  } else {
+    dl.classList.remove("hidden"); dl.textContent = r.label; dl.href = url(r.id);
+    document.getElementById("meta").textContent = r.meta;
+  }
+  document.getElementById("arm").classList.toggle("hidden", os !== "win");
+  document.getElementById("armlink").href = url(REL.winarm.id);
+  document.querySelectorAll("[data-for]").forEach(function (s) {
+    s.classList.toggle("hidden", s.getAttribute("data-for").split(" ").indexOf(os) < 0);
+  });
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.setAttribute("aria-pressed", b.getAttribute("data-os") === os ? "true" : "false");
+  });
+}
+document.querySelectorAll(".tabs button").forEach(function (b) {
+  b.addEventListener("click", function () { show(b.getAttribute("data-os"), false); });
+});
+show(detect(), true);
+</script>
+</body>
+</html>
