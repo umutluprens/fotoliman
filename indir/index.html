@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FotoLiman'ı indir</title>
+<meta name="description" content="FotoLiman'ın son sürümünü tek tıkla indir: Mac, Windows ve Android.">
+<style>
+:root { --ink:#163A5C; --muted:#5B6773; --sea:#1C67B8; --coral:#D9473B; --leaf:#17784B; --bg:#FBF7F2; --card:#FFFFFF; --line:#E6E1DA; --soft:#F1ECE5; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink:#E8EEF5; --muted:#A7B3C0; --sea:#6CB4F5; --coral:#FF8A7E; --leaf:#5FD39A; --bg:#101B26; --card:#162432; --line:#26384A; --soft:#1B2C3C; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+header { display:flex; gap:14px; align-items:center; }
+header img { flex:none; }
+h1 { font-size: 28px; line-height:1.2; margin:0; }
+.sub { color:var(--muted); margin:2px 0 0; font-size:16px; }
+.hero { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:26px 22px; margin:24px 0 10px; text-align:center; }
+.hero p { margin:0 0 14px; color:var(--muted); }
+.dl { display:inline-block; background:#1C67B8; color:#fff; text-decoration:none; font-size:20px; font-weight:700; padding:16px 34px; border-radius:16px; }
+.dl:hover { filter:brightness(1.08); }
+.meta { font-size:14px; color:var(--muted); margin-top:10px !important; }
+.others { margin:14px 0 0; font-size:15px; color:var(--muted); }
+.tabs { display:inline-flex; gap:6px; background:var(--soft); padding:4px; border-radius:12px; margin-top:6px; flex-wrap:wrap; justify-content:center; }
+.tabs button { border:0; background:transparent; color:var(--ink); font:600 15px/1 inherit; font-family:inherit; padding:9px 14px; border-radius:9px; cursor:pointer; }
+.tabs button[aria-pressed="true"] { background:var(--card); box-shadow:0 1px 3px rgba(0,0,0,.12); }
+.small { font-size:14px; }
+h2 { font-size:21px; margin:34px 0 4px; }
+ol.steps { list-style:none; padding:0; margin:16px 0 0; counter-reset:s; }
+ol.steps > li { counter-increment:s; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 18px 16px 62px; margin-bottom:14px; position:relative; }
+ol.steps > li::before { content:counter(s); position:absolute; left:16px; top:16px; width:32px; height:32px; border-radius:50%; background:var(--coral); color:#fff; font-weight:700; text-align:center; line-height:32px; }
+ol.steps b { color:var(--ink); }
+figure { margin:14px 0 2px; }
+figure img { display:block; max-width:100%; height:auto; }
+figcaption { font-size:13px; color:var(--muted); margin-top:4px; }
+.note { background:var(--soft); border-radius:14px; padding:14px 16px; font-size:15px; margin-top:14px; }
+.ok { color:var(--leaf); font-weight:700; }
+.hidden { display:none !important; }
+footer { margin-top:40px; font-size:14px; color:var(--muted); text-align:center; }
+footer a, a { color:var(--sea); }
+@media (max-width:520px){ ol.steps > li { padding-left:18px; padding-top:58px; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <img src="../logo.svg" width="64" height="64" alt="FotoLiman logosu">
+  <div>
+    <h1>FotoLiman'ı indir</h1>
+    <p class="sub">Fotoğraflarını kendi diskine, kontrol ederek yedekle.</p>
+  </div>
+</header>
+
+<section class="hero" aria-live="polite">
+  <p id="detected">Cihazına uygun sürüm:</p>
+  <a id="dl" class="dl" href="#">İndir</a>
+  <p id="meta" class="meta"></p>
+  <p id="arm" class="meta small hidden">Snapdragon (ARM işlemcili) bilgisayar mı? <a id="armlink" href="#">Bu sürümü indir</a>.</p>
+  <p class="others">Başka bir cihaz için:</p>
+  <div class="tabs" role="group" aria-label="Cihaz seç">
+    <button data-os="mac">Mac</button>
+    <button data-os="win">Windows</button>
+    <button data-os="android">Android</button>
+    <button data-os="ios">iPhone</button>
+  </div>
+</section>
+
+<!-- MAC -->
+<section data-for="mac">
+  <h2>Mac'te kurulum</h2>
+  <p class="sub">FotoLiman, Apple'ın ücretli geliştirici programında olmadığı için Mac ilk açılışta bir kez uyarı verir. Aşağıdaki adımlar bir dakika sürer, bir daha sorulmaz.</p>
+  <ol class="steps">
+    <li><b>İndirdiğin dosyayı aç</b> ve FotoLiman'ı <b>Applications</b> (Uygulamalar) klasörüne sürükle. Sonra FotoLiman'a çift tıkla.</li>
+    <li><b>“FotoLiman açılmadı”</b> uyarısı çıkar. <b>Bitti</b>'ye bas. <span class="small">(İngilizce Mac'te: <i>Done</i>)</span>
+      <figure><img src="img/mac1.png" width="424" alt="Mac uyarısı: Bitti düğmesi işaretli"></figure></li>
+    <li><b>Sistem Ayarları › Gizlilik ve Güvenlik</b>'i aç, en alta in ve FotoLiman satırındaki <b>Yine de Aç</b>'a bas. <span class="small">(<i>System Settings › Privacy &amp; Security › Open Anyway</i>)</span>
+      <figure><img src="img/mac2.png" width="600" alt="Gizlilik ve Güvenlik ekranı: Yine de Aç düğmesi işaretli"></figure>
+      Bir kez daha sorarsa yine <b>Yine de Aç</b> de ve Mac parolanı ya da Touch ID'ni gir.
+      <figure><img src="img/mac3.png" width="424" alt="Onay penceresi: Yine de Aç düğmesi işaretli"></figure></li>
+  </ol>
+  <p class="note">Gereken: Apple çipli Mac (M1 ve sonrası) ve macOS 14 ya da üstü.</p>
+</section>
+
+<!-- WINDOWS -->
+<section data-for="win" class="hidden">
+  <h2>Windows'ta kurulum</h2>
+  <p class="sub">FotoLiman ücretli bir dijital imza taşımadığı için Windows ilk çalıştırmada bir kez uyarı verir.</p>
+  <ol class="steps">
+    <li><b>İndirdiğin dosyaya çift tıkla.</b> <span class="small">(Tarayıcının indirilenler listesinden de açabilirsin.)</span></li>
+    <li><b>“Windows bilgisayarınızı korudu”</b> mavi ekranı çıkarsa önce <b>Ek bilgi</b>'ye, sonra <b>Yine de çalıştır</b>'a bas.
+      <figure><img src="img/win1.png" width="560" alt="Windows uyarısı: Ek bilgi işaretli"></figure>
+      <figure><img src="img/win2.png" width="560" alt="Windows uyarısı: Yine de çalıştır işaretli"></figure></li>
+    <li><b>Kur</b>'a bas (eski sürüm varsa düğme <b>Güncelle</b> yazar). Bitince FotoLiman masaüstünde ve Başlat menüsünde olur.</li>
+  </ol>
+  <p class="note">Telefondan Wi‑Fi ile aktarım için FotoLiman Link'i ilk açtığında güvenlik duvarı sorarsa <b>Özel ağlar</b>'ı işaretleyip izin ver.</p>
+</section>
+
+<!-- ANDROID -->
+<section data-for="android" class="hidden">
+  <h2>Android'de kurulum</h2>
+  <p class="sub">FotoLiman Mobil Google Play'de değil; dosyadan kurulur. Telefon ilk seferde bir izin ister.</p>
+  <ol class="steps">
+    <li><b>İndirme bitince dosyaya dokun.</b> Telefon “bilinmeyen uygulamalar” uyarısı verirse <b>Ayarlar</b>'a dokun.
+      <figure><img src="img/and1.png" width="600" alt="Android uyarısı: Ayarlar işaretli"></figure></li>
+    <li><b>Bu kaynaktan izin ver</b> düğmesini aç, sonra geri dön.
+      <figure><img src="img/and2.png" width="600" alt="Bu kaynaktan izin ver düğmesi işaretli"></figure></li>
+    <li><b>Yükle</b>'ye dokun. <span class="small">“Play Protect” uyarısı çıkarsa <b>Ayrıntılar › Yine de yükle</b>.</span>
+      <figure><img src="img/and3.png" width="600" alt="Yükle düğmesi işaretli"></figure></li>
+  </ol>
+  <p class="note">Android 8 ve üstü. Yeni sürüm çıktığında aynı düğmeden indirip üzerine kurman yeterli; ayarların korunur.</p>
+</section>
+
+<!-- IPHONE -->
+<section data-for="ios" class="hidden">
+  <h2>iPhone</h2>
+  <p class="note">iPhone'a uygulama dosyadan kurulamıyor; Apple buna izin vermiyor. iPhone'undaki fotoğrafları yedeklemek için <b>iPhone'u kabloyla Mac ya da Windows bilgisayara tak</b> ve bilgisayardaki FotoLiman'da <b>Kamera / SD kart</b> bölümünden iPhone'u seç. Bilgisayar için indirme düğmesi yukarıda.</p>
+</section>
+
+<!-- GOOGLE -->
+<section data-for="mac win" id="google">
+  <h2>Google Fotoğraflar'a bağlanırken</h2>
+  <p class="sub">FotoLiman kişisel bir uygulama olduğu için Google bir kez “doğrulanmadı” ekranı gösterir. FotoLiman sadece senin seçtiğin fotoğrafları okur, hiçbir şeyi silemez.</p>
+  <ol class="steps">
+    <li><b>Gelişmiş</b>'e, sonra <b>fotoliman sayfasına git (güvenli değil)</b>'e bas ve izin ver.
+      <figure><img src="img/goo.png" width="560" alt="Google uyarısı: Gelişmiş ve devam bağlantısı işaretli"></figure></li>
+  </ol>
+</section>
+
+<footer>
+  <p><a href="../">FotoLiman hakkında</a> · <a href="../privacy.html">Gizlilik</a> · <a href="../terms.html">Koşullar</a></p>
+  <p>Görsellerdeki pencereler örnektir; senin ekranında küçük farklarla görünebilir.</p>
+</footer>
+</main>
+
+<script>
+// The only place to change on a new release: version labels and Drive file ids.
+var REL = {
+  mac:     { name: "Mac",     label: "Mac için indir",     meta: "Sürüm 1.1.9 · 47 MB", id: "1nlI2OUzfeZRCz36e73GWkBorJHM_MLAq" },
+  win:     { name: "Windows", label: "Windows için indir", meta: "Sürüm 1.1.9 · Windows 10 ve 11 · 59 MB", id: "1kD2yekEqKNTJN_m8J0329IZccTOsF_m1" },
+  winarm:  { id: "1nY1fHGRExjZ0l8PgCzttHXpNfhaGRzlt" },
+  android: { name: "Android", label: "Android için indir", meta: "FotoLiman Mobil 0.2.0 · 1,5 MB", id: "1TUFWtbOl-Ujgyb-KJUcbJ8ft79Ufd362" },
+  ios:     { name: "iPhone",  label: "", meta: "", id: "" }
+};
+function url(id) { return "https://drive.usercontent.google.com/download?id=" + id + "&export=download&confirm=t"; }
+function detect() {
+  var ua = navigator.userAgent || "";
+  if (/Android/i.test(ua)) return "android";
+  if (/iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return "ios";
+  if (/Mac/i.test(ua)) return "mac";
+  if (/Win/i.test(ua)) return "win";
+  return "mac";
+}
+function show(os, auto) {
+  var r = REL[os], dl = document.getElementById("dl");
+  document.getElementById("detected").textContent = auto ? "Cihazına uygun sürüm (" + r.name + "):" : r.name + " için:";
+  if (os === "ios") {
+    dl.classList.add("hidden");
+    document.getElementById("meta").textContent = "iPhone için uygulama dosyası yok. Aşağıdaki açıklamaya bak.";
+  } else {
+    dl.classList.remove("hidden"); dl.textContent = r.label; dl.href = url(r.id);
+    document.getElementById("meta").textContent = r.meta;
+  }
+  document.getElementById("arm").classList.toggle("hidden", os !== "win");
+  document.getElementById("armlink").href = url(REL.winarm.id);
+  document.querySelectorAll("[data-for]").forEach(function (s) {
+    s.classList.toggle("hidden", s.getAttribute("data-for").split(" ").indexOf(os) < 0);
+  });
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.setAttribute("aria-pressed", b.getAttribute("data-os") === os ? "true" : "false");
+  });
+}
+document.querySelectorAll(".tabs button").forEach(function (b) {
+  b.addEventListener("click", function () { show(b.getAttribute("data-os"), false); });
+});
+show(detect(), true);
+</script>
+</body>
+</html>
