@@ -107,6 +107,7 @@ footer a, a { color:var(--sea); }
   <h2>Installing on Android</h2>
   <p class="sub">FotoLiman Mobile is not on Google Play; it installs from the file. Your phone asks for permission the first time.</p>
   <ol class="steps">
+    <li><b>Wait for the download to finish.</b> <span class="small">(The file is saved in your browser's Downloads folder.)</span></li>
     <li><b>When the download finishes, tap the file.</b> If the phone warns about unknown apps, tap <b>Settings</b>.
       <figure><img src="img/and1.png" width="600" alt="Android warning with Settings highlighted"></figure></li>
     <li>Turn on <b>Allow from this source</b>, then go back.
@@ -140,15 +141,14 @@ footer a, a { color:var(--sea); }
 </main>
 
 <script>
-// The only place to change on a new release: version labels and Drive file ids.
+// The only place to change on a new release: version labels and stable release asset URLs.
 var REL = {
-  mac:     { name: "Mac",     label: "Download for Mac",     meta: "Version 1.1.13 · 47 MB", id: "1nlI2OUzfeZRCz36e73GWkBorJHM_MLAq" },
-  win:     { name: "Windows", label: "Download for Windows", meta: "Version 1.1.13 · Windows 10 and 11 · 59 MB", id: "1kD2yekEqKNTJN_m8J0329IZccTOsF_m1" },
-  winarm:  { id: "1nY1fHGRExjZ0l8PgCzttHXpNfhaGRzlt" },
-  android: { name: "Android", label: "Download for Android", meta: "FotoLiman Mobile 0.2.2 · 1.5 MB", id: "1TUFWtbOl-Ujgyb-KJUcbJ8ft79Ufd362" },
-  ios:     { name: "iPhone",  label: "", meta: "", id: "" }
+  mac:     { name: "Mac",     label: "Download for Mac",     meta: "Version 1.1.13 · 47 MB", url: "https://github.com/umutluprens/fotoliman/releases/download/macos/FotoLiman-Mac.dmg" },
+  win:     { name: "Windows", label: "Download for Windows", meta: "Version 1.1.13 · Windows 10 and 11 · 59 MB", url: "https://github.com/umutluprens/fotoliman/releases/download/windows-x64/FotoLiman-Kurulum-Windows.exe" },
+  winarm:  { url: "https://github.com/umutluprens/fotoliman/releases/download/windows-arm64/FotoLiman-Kurulum-Windows-ARM.exe" },
+  android: { name: "Android", label: "Download for Android", meta: "FotoLiman Mobile 0.2.2 · 1.5 MB", url: "https://github.com/umutluprens/fotoliman/releases/download/android/FotoLiman-Mobil-Android.apk" },
+  ios:     { name: "iPhone",  label: "", meta: "", url: "" }
 };
-function url(id) { return "https://drive.usercontent.google.com/download?id=" + id + "&export=download&confirm=t"; }
 function detect() {
   var ua = navigator.userAgent || "";
   if (/Android/i.test(ua)) return "android";
@@ -164,13 +164,13 @@ function show(os, auto) {
     dl.classList.add("hidden");
     document.getElementById("meta").textContent = "There is no app file for iPhone. See the note below.";
   } else {
-    dl.classList.remove("hidden"); dl.textContent = r.label; dl.href = url(r.id);
+    dl.classList.remove("hidden"); dl.textContent = r.label; dl.href = r.url;
     document.getElementById("meta").textContent = r.meta;
   }
   var NOTE = {"mac": "After downloading, macOS will say it can't verify the app. That's normal: see <a href=\"#kurulum\">the 3 steps below</a>.", "win": "Windows may say \"Windows protected your PC\" the first time. That's normal: see <a href=\"#kurulum\">the steps below</a>.", "android": "Your phone asks to allow unknown apps the first time. That's normal: see <a href=\"#kurulum\">the steps below</a>."};
   var note = document.getElementById("note"); note.innerHTML = NOTE[os] || ""; note.classList.toggle("hidden", !NOTE[os]);
   document.getElementById("arm").classList.toggle("hidden", os !== "win");
-  document.getElementById("armlink").href = url(REL.winarm.id);
+  document.getElementById("armlink").href = REL.winarm.url;
   document.querySelectorAll("[data-for]").forEach(function (s) {
     s.classList.toggle("hidden", s.getAttribute("data-for").split(" ").indexOf(os) < 0);
   });
