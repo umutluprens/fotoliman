@@ -1,5 +1,5 @@
 {
   "android": { "versionCode": 8, "versionName": "0.2.4" },
-  "mac": { "build": 51, "version": "1.1.27" },
-  "windows": { "build": 51, "version": "1.1.27" }
+  "mac": { "build": 52, "version": "1.1.28" },
+  "windows": { "build": 52, "version": "1.1.28" }
 }
