@@ -3,7 +3,7 @@
 FotoLiman backs up your photos and videos to your own disk and verifies every copy. It works with Google Photos, your phone (by cable or Wi-Fi QR) and camera or SD cards, on Mac and Windows.
 
 **Download:** [English](https://umutluprens.github.io/fotoliman/download/) or [Türkçe](https://umutluprens.github.io/fotoliman/indir/)<br>
-**Latest version:** [1.1.25](https://github.com/umutluprens/fotoliman/releases/latest)
+**Latest version:** [1.1.27](https://github.com/umutluprens/fotoliman/releases/latest)
 
 This repository holds the FotoLiman website (download, privacy and terms pages) and the public release notes. The source code of the app is kept in a separate private repository.
 
@@ -26,7 +26,7 @@ FotoLiman copies files from your sources to a disk you choose. It does not uploa
 FotoLiman fotoğraf ve videolarını kendi diskine kopyalar ve her kopyayı doğrular. Mac ve Windows'ta Google Fotoğraflar, telefon (kabloyla ya da Wi-Fi QR ile) ve kamera ya da SD kart ile çalışır.
 
 **İndir:** [umutluprens.github.io/fotoliman/indir](https://umutluprens.github.io/fotoliman/indir/)<br>
-**Son sürüm:** [1.1.25](https://github.com/umutluprens/fotoliman/releases/latest)
+**Son sürüm:** [1.1.27](https://github.com/umutluprens/fotoliman/releases/latest)
 
 Bu depoda FotoLiman'ın sitesi (indirme, gizlilik ve kullanım şartları sayfaları) ve herkese açık sürüm notları yer alır. Uygulamanın kaynak kodu ayrı ve özel bir depoda tutulur.
 
